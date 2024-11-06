@@ -19,10 +19,10 @@ void heapify(int a[], int n, int i)
     // at the end, check if the largest_idx is unchanged, i.e. the index of largest_idx is still same a root, then don't do anything
     // else, swap the root with the largest_idx element
 
-    if ((left_idx < n) && (a[left_idx] > a[largest_idx]))
+    if ((left_idx < n) && (a[left_idx] < a[largest_idx]))
         largest_idx = left_idx;
     
-    if ((right_idx < n) && (a[right_idx] > a[largest_idx]))
+    if ((right_idx < n) && (a[right_idx] < a[largest_idx]))
         largest_idx = right_idx;
     
 
@@ -117,8 +117,9 @@ void insert_heap(int a[], int x, int* n)
 
 int main()
 {
-    int a[100] = {54, 16, 28, 46, 18, 96, 1};
-    int n = 7;
+    // int a[100] = {54, 16, 28, 46, 18, 96, 1};
+    int a[100] = {7,5,10,1,4};
+    int n = 5;
 
     printf("Before sorting array elements are - \n");
     printf("[ ");
